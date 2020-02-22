@@ -1,9 +1,5 @@
 #!/bin/bash
 
-cd aws-app
-npm install
-cd api
-npm install
 cp -R ./ ../backend
 
 cp Dockerfile-front Dockerfile
