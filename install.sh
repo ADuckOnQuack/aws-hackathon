@@ -12,4 +12,4 @@ cp Dockerfile-backend Dockerfile
 sudo docker build -t node-backend .
 
 sudo docker run -d --rm node-backend
-sudo docker run -d --rm -p:5000:80 node-front
+sudo docker run -d --rm -p:80:5000 node-front
