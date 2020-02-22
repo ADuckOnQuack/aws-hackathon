@@ -6,9 +6,9 @@ COPY aws-app /opt/aws-app
 
 WORKDIR /opt/aws-app
 RUN npm install
-RUN npm run build
+# RUN npm run build
 
-CMD [ "serve", "-s", "build", "--", "--port", "80" ]
-# CMD [ "npm", "start", "--", "--port", "80" ]
+# CMD [ "serve", "-s", "build" ]
+CMD [ "npm", "start", "--", "--port", "80" ]
 
 EXPOSE 5000 9000
