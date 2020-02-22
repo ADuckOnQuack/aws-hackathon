@@ -4,7 +4,6 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var testAPIRouter = require('./routes/testAPI');
-var loginRouter = require('./routes/login')
 var cors = require('cors');
 
 var indexRouter = require('./routes/index');
