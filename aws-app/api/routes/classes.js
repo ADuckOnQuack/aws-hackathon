@@ -4,7 +4,6 @@ var connection = require('../db')
 
 /* GET classes page. */
 router.get('/?', function(req, res, next) {
-  console.log(connection.query('SELECT * FROM '));
   res.send('Getting all classes for user:' + req.query.uid);
 });
 
