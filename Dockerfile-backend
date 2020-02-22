@@ -7,6 +7,6 @@ COPY aws-app /opt/aws-app
 WORKDIR /opt/aws-app/api
 RUN npm install
 
-CMD [ "npm start" ]
+CMD [ "npm", "start" ]
 
 EXPOSE 3000 9000
