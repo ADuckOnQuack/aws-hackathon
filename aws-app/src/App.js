@@ -3,6 +3,9 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Login from './containers/Login';
 import Test from './containers/Test';
+import GMap from './containers/GMap';
+import Classes from './containers/Classes';
+import Class from './containers/Class';
 
 class App extends Component {
   render() {
@@ -11,6 +14,9 @@ class App extends Component {
         <Switch>
           <Route path="/login" exact component={Login} /> 
           <Route path="/test" exact component={Test} />
+          <Route path="/map" exact component={GMap} />
+          <Route path="/classes" exact component={Classes} />
+          <Route path="/classes/:uid" exact component={Class} />
         </Switch>
       </div>
     )
