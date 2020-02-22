@@ -16,7 +16,7 @@ class App extends Component {
           <Route path="/test" exact component={Test} />
           <Route path="/map" exact component={GMap} />
           <Route path="/classes" exact component={Classes} />
-          <Route path="/classes/:uid" exact component={Class} />
+          <Route path="/classes/:cid" exact component={Class} />
         </Switch>
       </div>
     )

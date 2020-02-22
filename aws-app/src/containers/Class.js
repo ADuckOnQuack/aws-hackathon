@@ -6,7 +6,7 @@ import { useParams, Route } from "react-router";
 class Class extends Component {
     constructor(props) {
         super(props);
-        this.state = { apiResponse: "", uid: props.match.params.uid};
+        this.state = { apiResponse: "", cid: props.match.params.cid};
     }
 
     callAPI(id) {
@@ -17,7 +17,7 @@ class Class extends Component {
     }
 
     componentDidMount() {
-        this.callAPI(this.state.uid);
+        this.callAPI(this.state.cid);
     }
 
     render() {
