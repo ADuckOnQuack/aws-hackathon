@@ -14,7 +14,8 @@ export default function Login(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    history.push("/test");
+    props.history.push("/test", {userName: userName});
+    //history.push("/test", state: {userName: });
   }
 
   return (

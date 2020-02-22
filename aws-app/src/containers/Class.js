@@ -12,6 +12,9 @@ class Class extends Component {
     callAPI(id) {
         fetch("http://localhost:9000/classes/" + id)
         .then(res => res.text())
+        .then(res => () => {
+            res.toUpperCase();
+        })
         .then(res => this.setState({ apiResponse: res }))
         .catch(err => err);
     }
