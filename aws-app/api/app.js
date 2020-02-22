@@ -5,31 +5,11 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var testAPIRouter = require('./routes/testAPI');
 var cors = require('cors');
-var mysql = require('mysql');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-require('dotenv').config();
-
-var connection = mysql.createConnection({
-  host     : process.env.RDS_HOSTNAME,
-  user     : process.env.RDS_USERNAME,
-  password : process.env.RDS_PASSWORD,
-  port     : process.env.RDS_PORT
-})
-
 var app = express();
-
-connection.connect(function(err) {
-  if (err) {
-    console.error('Database connection failed: ' + err.stack);
-    return;
-  }
-
-  console.log('Connected to database.');
-});
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
