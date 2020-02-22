@@ -1,7 +1,5 @@
 #!/bin/bash
 
-rm -rf aws-app/build
-rm -rf aws-app/node_modules
 cp -R ./ ../backend
 
 cp Dockerfile-front Dockerfile
