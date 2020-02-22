@@ -11,7 +11,12 @@ class Class extends Component {
     callAPI(id) {
         fetch("http://localhost:9000/classes/" + id)
         .then(res => res.text())
-        .then(res => this.setState({ apiResponse: res }))
+        .then(res => {
+          this.setState({ apiResponse: res });
+          console.log(res);
+          var obj = JSON.parse(res)[0];
+          console.log(obj);
+        })
         .catch(err => err);
     }
 
@@ -27,11 +32,11 @@ class Class extends Component {
                 google={this.props.google}
                 zoom={17}
                 style={mapStyles}
-                initialCenter={{lat:34.182496, lng:-117.323914}}
+                initialCenter={{lat:34.1811, lng:-117.321}}
               >
                 <Marker position={{
-                  lat: 34.182496,
-                  lng: -117.323914
+                  lat: 34.1811,
+                  lng: -117.321
                 }}/>
               </Map>
             </div>
