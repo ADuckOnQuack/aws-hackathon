@@ -1,0 +1,12 @@
+FROM ubuntu:18.04
+
+RUN apt-get update && apt-get install npm -y
+RUN npm install -g serve
+COPY aws-app /opt/aws-app
+
+WORKDIR /opt/aws-app/api
+RUN npm install
+
+CMD [ "npm start" ]
+
+EXPOSE 3000, 9000
