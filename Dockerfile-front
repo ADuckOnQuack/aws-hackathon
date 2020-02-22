@@ -10,4 +10,4 @@ RUN npm run build
 
 CMD [ "serve", "-s", "build" ]
 
-EXPOSE 3000 9000
+EXPOSE 5000 9000
